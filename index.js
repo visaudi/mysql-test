@@ -9,7 +9,7 @@ let mysql = require("mysql2");
     //password: 'password',
     //database: 'complexity'
 
-    host: process.env.HOSTNAME,
+    host: process.env.DATABASE_URL,
 });*/
 
 /*connection.query(
@@ -20,4 +20,6 @@ let mysql = require("mysql2");
     }
 );*/
 
-console.log("ENV", process.env.HOSTNAME)
+let connection = mysql.createConnection(process.env.DATABASE_URL);
+
+console.log("ENV", process.env)
