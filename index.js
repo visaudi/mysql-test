@@ -20,5 +20,4 @@ let mysql = require("mysql2");
     }
 );*/
 
-console.log("ENV": process.env.HOSTNAME)
-
+console.log("ENV", process.env.HOSTNAME)
