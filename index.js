@@ -33,6 +33,13 @@ connection.query(
             function(error, results, fields) {
                 console.log(results);
                 console.log(fields);
+                connection.query(
+                    'SELECT * from test;',
+                    function(error, results, fields) {
+                        console.log("results", results);
+                        console.log(fields);
+                    }
+                )
             }
         );
     }
